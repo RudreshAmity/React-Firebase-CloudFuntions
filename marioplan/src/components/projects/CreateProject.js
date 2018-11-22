@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class CreateProject extends Component {
+class CreateProject extends Component {
  
   state = {
     title: '',

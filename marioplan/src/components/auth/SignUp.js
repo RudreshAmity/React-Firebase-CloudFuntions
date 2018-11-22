@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class SignUp extends Component {
+ class SignUp extends Component {
  
   state = {
     email: '',

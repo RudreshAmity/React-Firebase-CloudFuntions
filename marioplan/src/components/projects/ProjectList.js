@@ -1,12 +1,14 @@
 import React from 'react';
 import ProjectSummary from './ProjectSummary'
-
-const ProjectList = () => {
+//receiving props from dashboard.js
+const ProjectList = ({projects}) => {
     return(
         <div className="project-list section">
-           <ProjectSummary />
-           <ProjectSummary />
-           <ProjectSummary />           
+           { projects && projects.map(project => { // here if we have projects then it will execute projects.map
+               return( //passing each project as props to Project summary
+                   <ProjectSummary project={project} key={project.id}/>
+               )
+           })}        
         </div>
     )
 }
