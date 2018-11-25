@@ -1,6 +1,6 @@
 import authReducer from './authReducer';
 import projectReducer from './projectReducer';
-/* importing combine reducer from redux library for combining our reducer */
+/* importing combine-reducer from redux library for combining our reducer */
 import { combineReducers } from 'redux';
 
 /* combining reducers */
