@@ -9,6 +9,7 @@ import rootReducer from './store/reducers/rootReducer';
 application so that the application has access to the store */
 import { Provider } from 'react-redux' // react-redux is the binding layer. This help us to bind redux with our react app
 
+
 const store = createStore(rootReducer); // creating store
 //passing the store into the Provider
 ReactDOM.render(<Provider store = {store }><App /></Provider>, document.getElementById('root'));
