@@ -5,7 +5,7 @@ export const createProject = (project) => {
            const firestore = getFirestore();  //this give us reference to firestore database
            firestore.collection('projects').add({ //passing object {} into this add method
                 ...project,
-                authorFirstName : 'Rudresh',
+                authorFirstName : 'Rudresh',      //passing data to firebase
                 authorLastName : 'Narwal',
                 authorId : 12345,
                 createdAt : new Date()  
