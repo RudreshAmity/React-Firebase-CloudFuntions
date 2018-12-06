@@ -2,7 +2,7 @@ export const createProject = (project) => {
     return(dispatch, getState, { getFirebase, getFirestore }) => {
            //make async call to database
            //pausing the dispatch
-           const firestore = getFirestore;  //this give us reference to firestore database
+           const firestore = getFirestore();  //this give us reference to firestore database
            firestore.collection('projects').add({ //passing object {} into this add method
                 ...project,
                 authorFirstName : 'Rudresh',
