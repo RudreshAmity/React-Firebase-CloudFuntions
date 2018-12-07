@@ -3,6 +3,7 @@ import projectReducer from './projectReducer';
 /* importing combine-reducer from redux library for combining our reducer */
 import { combineReducers } from 'redux';
 import { firestoreReducer } from 'redux-firestore'// it know about our firestore data 
+// firestore reducer is responsible for syncing our data 
 
 /* combining reducers */
 const rootReducer = combineReducers({

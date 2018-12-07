@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import Notifications from './Notifications';
 import ProjectList from '../projects/ProjectList';
 import { connect } from 'react-redux'
- 
+import {firestoreConnect} from 'react-redux-firebase' // we want to use this thing as HOC at the bottom to connect this component with firstore collection.
+import { compose } from 'redux' 
 class Dashboard extends Component{
     render(){
         //console.log(this.props);
@@ -23,9 +24,16 @@ class Dashboard extends Component{
 }
 // this function takes in the state of our component
 const mapStateToProps = (state) => {
+     //console.log(state);
     return{  //returning object 
-        projects: state.project.projects  //project is the property in rootReducer which is accessing the projects from projectReducer
+        projects:   state.firestore.ordered.projects // loading firestore data you can see on your console for dot operation I have used.
+        //old comment //project is the property in rootReducer which is accessing the projects from projectReducer
     }
 }
 
-export default connect(mapStateToProps)(Dashboard);
+export default compose(
+        connect(mapStateToProps),
+        firestoreConnect([  // firestore connect to connect to single collection
+            { collection: 'projects' }
+    ])
+  )(Dashboard);
