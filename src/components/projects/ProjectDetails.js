@@ -35,9 +35,9 @@ const ProjectDetails = (props) => {
 }
 const mapStateToProps = (state, ownProps) => {  //ownProps is props of the component 
     //console.log(state);
-    const id = ownProps.match.params.id;   // ownProps is used to use props in this mapState to props, as we can't access props in this fuction directly 
+    const id = ownProps.match.params.id;   // ownProps is used to use props in this mapStateToProps, as we can't access props in this fuction directly 
     const projects = state.firestore.data.projects; // see on console using console.log(state)
-    const project = projects ? projects[id] : null // projects is the object that we see in our and if there is any project then we find the project on the projects object with that id  
+    const project = projects ? projects[id] : null // projects is the object that we see in our firestore and if there is any project then we find the project on the projects object with that id  
     return{
        project: project
     }
@@ -45,7 +45,7 @@ const mapStateToProps = (state, ownProps) => {  //ownProps is props of the compo
 
 export default compose(
     connect(mapStateToProps),
-    firestoreConnect([  // firestore connect to single collection
+    firestoreConnect([  // to connect firestore to single collection
         { collection: 'projects' }
 ])
 )(ProjectDetails);

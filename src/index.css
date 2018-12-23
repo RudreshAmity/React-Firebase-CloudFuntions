@@ -24,7 +24,7 @@ form{
 form button, form h5{
   margin: 20px 0;
 }
-/* coloring outline of text, email, password from aqua to  #ec407a  
+/* coloring outline of text, email, password from aqua to  #ec407a  */
 input[type=text]:not(.browser-default):focus:not([readonly]),
 input[type=email]:not(.browser-default):focus:not([readonly]),
 input[type=password]:not(.browser-default):focus:not([readonly]),
@@ -39,7 +39,7 @@ input[type=email]:not(.browser-default):focus:not([readonly]) + label,
 input[type=password]:not(.browser-default):focus:not([readonly]) + label{
   color: #ec407a !important;
 }
-*/
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
