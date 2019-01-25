@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+// serviceWorker is script that run inside the browser
 import * as serviceWorker from './serviceWorker';
+// before importing createStore you have to install redux and react-redux for different services
 import { createStore, applyMiddleware, compose } from 'redux'; /* import create store from redux library & appling middleware function && compose is used to combine several store enhancer*/
 import rootReducer from './store/reducers/rootReducer';
 /* importing provider component which can surround our app and pass the store into the 

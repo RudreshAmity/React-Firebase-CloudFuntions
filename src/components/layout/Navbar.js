@@ -1,7 +1,8 @@
+// Navbar design
 import React from 'react';
 import {Link} from 'react-router-dom';
-import SignedInLinks from './SignedInLinks';
-import SignedOutLinks from './SignedOutLinks';
+import SignedInLinks from './SignedInLinks';   // importing SignedInLinks
+import SignedOutLinks from './SignedOutLinks'; //  importing SignedOutLinks
 import { connect } from 'react-redux'  // we don't need firestore connect because we are not connecting to firestore anymore, we just want to access firebase property present in rootReducer on our state to see whether a user is logged in or not.
 
 const Navbar = () => {
@@ -9,7 +10,7 @@ const Navbar = () => {
         <nav className="nav-wrapper grey darken-3">
          <div className="container">
            <Link to='/' className="brand-logo">MarioPlan</Link>
-           <SignedInLinks/>
+           <SignedInLinks/>  
            <SignedOutLinks/>
          </div>
         </nav>

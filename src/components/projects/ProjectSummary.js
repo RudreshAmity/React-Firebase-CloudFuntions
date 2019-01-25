@@ -1,3 +1,4 @@
+// ProjectSummary is nested inside ProjectList 
 import React from 'react';
 
 const ProjectSummary = ({project}) => {
